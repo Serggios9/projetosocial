@@ -1,0 +1,65 @@
+@charset "UTF-8" ;
+
+* { /* Por padrão-vai abranger todo o site */
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body { /* (,) pra config duas E 100 pro fundo ocupar a tela inteira*/
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    background-image: url(imagens/fundo-madeira.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Trava o fundo */
+    background-size: cover; /* Cobre a tela inteira */
+    background-position: center center;
+}
+
+main {
+    height: 100vh;
+    position: relative; /*Abre espaço pra configurações */
+}
+
+#iphone {
+    background-image: url(imagens/frame-iphone.png);
+    position: absolute; /* Configurações pra centralizar */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*Vai começar a direita em baixo, essas config centralizam(Ir ajustando a % */
+    background-repeat: no-repeat;
+    height: 627px;
+    width: 311px;
+}
+
+iframe#tela {
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 267px;
+    height: 471px;
+}
+
+section#redes img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.651);
+    box-sizing: border-box; /*Tira a movimentação de qualquer efeito no hover*/
+}
+
+section#redes {
+    text-align: left;
+}
+
+section#redes img:hover {
+    border: 1px solid rgba(255, 255, 255, 0.685);
+    transition: transform 0.3s, border 0.5s; /*mostra que o transform dentro do transition demora 0.5s*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.651);
+    transform: translate(-3px, -3px); /*Move os botões quando passa o mouse-como mexer uma imagem*/
+}
+
